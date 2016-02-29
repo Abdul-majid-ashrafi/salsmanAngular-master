@@ -1,0 +1,37 @@
+<style>body
+.md-block{width: 83%;margin-left: 8%}
+</style>
+
+<div  layout="column" layout-align="center" layout-fill="layout-fill" style="width:50%; margin-left: 23%">
+    <div layout="column" class="loginBox md-whiteframe-z1">
+
+        <md-toolbar>         <!-- HEADING CODE-->
+            <h2 class="md-toolbar-tools" layout-align="center center">
+                <ng-md-icon icon="perm_identity" style="fill: white" size="55"></ng-md-icon>
+                <span>Create Admin</span></h2>
+        </md-toolbar>
+
+                            <!--INPUT CODES-->
+        <md-content layout="column" class="md-padding">
+            <md-input-container class="md-block">
+                <label>Username</label>
+                <input type="text" required ng-model="user.adminName">
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>Email</label>
+                <input type="email" required ng-model="user.adminEmail">
+            </md-input-container>
+            <md-input-container class="md-block">
+                <label>Password</label>
+                <input required type="password" ng-model="user.adminPass">
+                </md-input-container>
+            <md-input-container class="md-block">
+                    <label>Age</label>
+                    <input required type="number" ng-model="user.adminAge">
+                </md-input-container>
+
+                <md-button class="md-raised md-primary" ng-click="signUpAdmin(user)">Submit</md-button>
+
+        </md-content>
+    </div>
+</div>

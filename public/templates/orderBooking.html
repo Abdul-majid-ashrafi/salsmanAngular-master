@@ -1,0 +1,45 @@
+<!--<md-button  ui-sref="dashboard" flex  style="font-size: 123%">ADMIN: {{getAdminName.adminName | uppercase}}</md-button>-->
+
+<md-card class="md-whiteframe-24dp" layout-align="center center" style="background-color: #00B7FF; ">
+    <h3>Salesman Orders</h3>
+</md-card>
+
+
+<md-button class="md-fab mdl-js-ripple-effect" ui-sref="dashboard" style="float: right;position: fixed">
+    Back
+</md-button>
+
+<div class="demo-card-square mdl-card mdl-shadow--2dp" ng-repeat="guo in getUserOrder" id="cardUL">
+    <div class="mdl-card__title mdl-card--expand " id="cardImg" layout-align="center ">
+        <h2 class="mdl-card__title-text">{{guo.name | uppercase}}</h2>
+    </div>
+    <div class="mdl-card__actions mdl-card--border">
+        <md-switch ng-model="data.cb1" aria-label="Switch 1" ng-click="map(guo)" ui-sref="map">
+            Show Saleman  Location
+        </md-switch>
+
+        Order:  <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+        {{guo.msg}}
+    </a>
+        Price: {{guo.price}}</div>
+</div>
+
+<link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css"/>
+<style>
+    #cardUL {
+        width: 29%;
+        height: 210px;
+        float: left;
+        margin: 2%;
+    }
+    #cardImg {
+        color: #fff;
+        background: url('https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQp7KPTUad1pI0GT4e1IQpRIwDayW4F_VWcAHNa0UwnWDn6FQKx') bottom right 15% /* no-repeat #46B6AC;*/
+    }
+    b{
+        color: #00b0e8;
+    }
+body{
+    background-color: #f4ffff;
+}
+</style>
