@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css"/>
+<style>
+    .btn1 {
+        color : rgb(49, 46, 46);
+        background-color: rgba(255, 222, 121, 0.96);
+        border-radius: 10px 0 0 10px;
+        font-size: 16px;
+    }
+
+    b{
+        color: #00b0e8;
+    }
+</style>
+<md-toolbar>
+    <div class="md-toolbar-tools" layout="row">
+        <md-button ui-sref="dashboard.abc">Craete user</md-button>
+        <md-button ui-sref="dashboard.cba">Add products</md-button>
+        <md-button  ui-sref="dashboard" flex  style="font-size: 123%">ADMIN: {{getAdminName.adminName | uppercase}}</md-button>
+        <md-button ng-click="logOut()">logout </md-button>
+    </div>
+</md-toolbar>
+<ui-view></ui-view>
+<br/><br/>
+
+<h2 style="text-align: justify; padding: 20px 10%;color: #2b91af;text-shadow:  2px 3px 3px #040404">
+    This is Salesman <i>application</i>  you create your client for any <b>company</b> and every <b>business</b>
+    it's much useful <i>application</i>
+    you can send any <b>product</b> or any data or every <b>private data/everything</b> to share one person or more
+    let's check this..
+
+
+
+</h2>
+<md-button class="btn1" ui-sref="orderBooking" style="float: right;margin: 25px;"> orders </md-button>
