@@ -42,6 +42,7 @@ angular.module("App", ["ngMaterial","ui.router","firebase" ,"ngMdIcons","leaflet
                 url: "/location/:lat/:lng",
                 templateUrl: "templates/map.html",
                 controller: "mapController"
+
             })
 
         .state("dashboard.cba",{

@@ -4,7 +4,6 @@ angular.module("App")
 
 
 
-
         /*==========SHOW BOOKING ORDER IN ALERT FROM  IONIC========*/
         var ref = new Firebase("https://salsmanapp.firebaseio.com/notific");
         ref.on("child_added",function(msg){
