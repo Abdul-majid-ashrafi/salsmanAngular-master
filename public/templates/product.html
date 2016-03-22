@@ -1,9 +1,9 @@
 
 <div id="ord">
-    <br/>
+    <br/><br/><br/>
 
 
-    <div  layout="column" layout-align="center" layout-fill="layout-fill" style="width:50%; margin-left: 23%">
+    <div  layout="column" layout-align="center" layout-fill="layout-fill" style="width:40%; margin-left: 30%; ">
         <div layout="column" class="loginBox md-whiteframe-z1">
 
             <md-toolbar>         <!-- HEADING CODE-->
@@ -11,8 +11,8 @@
                     <ng-md-icon icon="manu" style="fill: white" size="55"></ng-md-icon>
                     <span>Add Product</span></h2>
             </md-toolbar>
-            <md-content class="login-card md-whiteframe-24dp" style="padding: 9%">
-                <form>
+            <!--<md-content class="login-card md-whiteframe-24dp" style="padding: 9%">-->
+                <form id="FORM">
 
                     <md-input-container class="md-block">
                         <label>Product</label>
@@ -22,42 +22,43 @@
                         <label>Product2</label>
                         <input required type="text" ng-model="proData.product2">
                     </md-input-container>
-                    <button ng-click="productADD(proData)" style="float: right" class="md-button md-primary md-raised">submit</button>
+                    <md-button class="btn1" ng-click="productADD(proData)" style="float: right"> submit </md-button>
 
                 </form>
-            </md-content>
         </div></div>
-
+    <br/><br/><br/>
     <details style="margin-bottom: 10%">
         <summary ng-click="showPro()"> PRODUCTS </summary>
         <div ng-repeat="a in productArray">
-            <md-card class="md-whiteframe-24dp" layout-align="center center">{{a.product}}</md-card>
-            <md-card class="md-whiteframe-24dp" layout-align="center center">{{a.product2}}</md-card>
-        </div> <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+            <span  class="md-whiteframe-24dp" layout-align="center center">{{a.product | uppercase}}</span>
+            <span class="md-whiteframe-24dp" layout-align="center center">{{a.product2 | uppercase}}</span>
+        </div>
     </details>
 </div>
-<br/>
-<br/>
-<br/>
+<br/><br/><br/>
+
+
 <style>
     summary{
+        border: outset 5px #0084b3;
         margin: 9px;
         width: 150px;
         background-color: #0084b3;
-        padding: 3%;
+        padding: 1%;
     }
 
-    md-card{
-        font-size: 31px ;
+    .md-whiteframe-24dp{
+        font-size: 41px ;
         float: right;
         border-radius: 7px;
         margin: 20px;
-        width: 210px;
-        padding:  3%;
-        background-color:#00B7FF;
+        /*width: 230px;*/
+        padding:  2%;
+        /*background-color:#00B7FF;*/
+        background-image: url("");
+    }
+    #FORM{
+        padding: 5%;
+        /*background: url("images/Danish.png");*/
     }
 </style>

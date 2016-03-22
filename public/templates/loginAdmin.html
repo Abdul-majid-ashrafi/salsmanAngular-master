@@ -1,6 +1,7 @@
 
 <style>
     .md-block{width: 83%;margin-left: 8%}
+
 </style>
 
 <!-- Using Angular Material 6.1 + Jade Templates-->
@@ -11,7 +12,8 @@
                 <ng-md-icon icon="perm_identity" style="fill: white" size="55"></ng-md-icon>
                 <span>Admin Login</span></h2>
         </md-toolbar>
-        <md-content layout="column" class="md-padding">
+
+        <div id="grad" layout="column" class="md-padding" style="background-image: url('http://www.ianbarnard.co.uk/wp-content/uploads/2013/09/free-blurred-web-backgrounds-02.jpg'); ">
             <md-input-container class="md-block">
                 <label>Email</label>
                 <input type="email" required ng-model="nam.mail">
@@ -27,6 +29,6 @@
                 <md-button ui-sref="signup" md-no-ink="md-no-ink"class="md-raised md-primary">Sign Up</md-button>
             </div>
 
-        </md-content>
+        </div>
     </div>
 </div>

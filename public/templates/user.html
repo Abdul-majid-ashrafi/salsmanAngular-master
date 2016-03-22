@@ -1,89 +1,80 @@
 <link rel="stylesheet" href="https://code.getmdl.io/1.1.1/material.indigo-pink.min.css" />
 
-    <br/>
+<br/>
 <div class="mainClass">
-        <md-card class="md-whiteframe-24dp" layout-align="center center">
-            <md-toolbar>
-                <h2 class="md-toolbar-tools" layout-align="center center">
-                    <ng-md-icon icon="perm_identity" style="fill: white" size="55"></ng-md-icon>
-                    <span>Create User</span></h2>
-            </md-toolbar>
+    <!--<md-card class="md-whiteframe-24dp" layout-align="center center">-->
+    <md-toolbar>
+        <h2 class="md-toolbar-tools" layout-align="center center">
+            <ng-md-icon icon="perm_identity" style="fill: white" size="75"></ng-md-icon><br/>
+            <span style="font-size: 27px">Create User</span></h2>
+    </md-toolbar>
 
 
-            <form>
-                <div layout-gt-sm="row">
-                    <md-input-container class="md-block" flex-gt-sm>
-                        <label>Name</label>
-                        <input required  type="text" ng-model="userData.userName" />
-                        <div>Tell us what we should call you!</div>
-                    </md-input-container>
-                    <md-input-container class="md-block" flex-gt-sm>
-                        <label>Email</label>
-                        <input  required  type="email" ng-model="userData.userEmail" />
-                        <div>How can we reach you!</div>
-                    </md-input-container>
-                </div>
-                <div layout-gt-sm="row">
-                    <md-input-container class="md-block" flex-gt-sm>
-                        <label>Password</label>
-                        <input required  type="password" ng-model="userData.userPass" />
-                    </md-input-container>
-                    <md-input-container class="md-block" flex-gt-sm>
-                        <label>Age</label>
-                        <input  required  type="number"  ng-model="userData.userAge" />
-                        <div>What's your age!</div>
-                    </md-input-container>
-                </div>
- <md-input-container class="md-block" flex-gt-sm>
-                        <label>Product</label>
-                        <input required  type="text" ng-model="userData.userPro" />
-                    </md-input-container>
-                <!--<div layout-gt-sm="row">
-                    <md-input-container class="md-block" flex-gt-sm>
-                        <label>Product</label>
-                        <input required  type="text" ng-model="userData.userPro" />
-                    </md-input-container>
-                    <md-input-container class="md-block" flex-gt-sm>
-                        <label>Product2</label>
-                        <input  required  type="text" ng-model="userData.userPro2"/>
-                        </md-input-container>
-                </div>
-                        <div layout-gt-sm="row">
-                        <md-input-container class="md-block" flex-gt-sm>
-                        <label>Product3</label>
-                        <input  required  type="text" ng-model="userData.userPro3"/>
-                    </md-input-container>
-                            <button ng-click="userAdd(userData)" class="md-button md-primary md-raised">submit</button>
-                        </div>
-                -->
-                <button ng-click="userAdd(userData)" class="md-button md-primary md-raised">submit</button>
-
-            </form>
-       </div>
-
-
-    <div>
-        <div class="demo-card-square mdl-card mdl-shadow--2dp" ng-repeat="a in mavia" id="cardUL">
-            <div class="mdl-card__title mdl-card--expand " id="cardImg" layout-align="center ">
-                <h2 class="mdl-card__title-text">{{ a.userName | uppercase}}</h2>
-            </div>
-            <div class="mdl-card__actions mdl-card--border">
-                <span style="color: darkseagreen;font-size: 29px;">Orders:</span>
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{a.userPro}}</a>
-     <!--           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{a.userPro2}}</a>
-                <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{a.userPro3}}</a>-->
-                <div class="mdl-card__actions mdl-card&#45;&#45;border">
-                    <a class="mdl-button mdl-button&#45;&#45;colored mdl-js-button mdl-js-ripple-effect">
-                        Date: {{a.createOn}}
-
-                    </a>
-                </div></div>
+    <form>
+        <div layout-gt-sm="row">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Name</label>
+                <input required  type="text" ng-model="userData.userName" />
+                <div>Tell us what we should call you!</div>
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Email</label>
+                <input  required  type="email" ng-model="userData.userEmail" />
+                <div>How can we reach you!</div>
+            </md-input-container>
         </div>
+        <div layout-gt-sm="row">
+            <md-input-container class="md-block" flex-gt-sm>
+                <label>Password</label>
+                <input required  type="password" ng-model="userData.userPass" />
+            </md-input-container>
+            <md-input-container class="md-block" flex-gt-sm >
+                <label>Age</label>
+                <input  required  type="number"  ng-model="userData.userAge" />
+                <div>What's your age!</div>
+            </md-input-container>
+        </div>
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Product</label>
+            <input required  type="text" ng-model="userData.userPro" />
+        </md-input-container>
+        <md-button class="btn1" ng-click="userAdd(userData)" > submit </md-button>
 
+
+    </form>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<div>
+    <div class="demo-card-square mdl-card mdl-shadow--2dp" ng-repeat="a in mavia" id="cardUL">
+        <div class="mdl-card__title mdl-card--expand " id="cardImg" layout-align="center ">
+            <h2 class="mdl-card__title-text">{{ a.userName | uppercase}}</h2>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <span style="color: darkseagreen;font-size: 29px;">Orders:</span>
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{a.userPro}}</a>
+            <!--           <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{a.userPro2}}</a>
+                       <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">{{a.userPro3}}</a>-->
+            <div class="mdl-card__actions mdl-card&#45;&#45;border">
+                <a class="mdl-button mdl-button&#45;&#45;colored mdl-js-button mdl-js-ripple-effect">
+                    Date: {{a.createOn}}
+
+                </a>
+            </div></div>
     </div>
+
+</div>
 <br/>
 <br/>
 <br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/><br/>
 <br/>
 <br/>
 <br/>
@@ -96,10 +87,10 @@
 <ui-view></ui-view>
 
 <style>
-    md-input-container{
-        /*padding-left: 120px;*/
-        padding: 0px 60px 0px 70px;
-    }
+    /*md-input-container{*/
+    /*!*padding-left: 120px;*!*/
+    /*padding: 0px 60px 0px 70px;*/
+    /*}*/
     #cardUL {
         border-radius: 21px;
         width: 29%;
@@ -112,9 +103,15 @@
         background: url('http://unrealcovers.com/wp-content/uploads/129-rain-blurry-window-lights.jpg') bottom right 15% /*no-repeat #46B6AC;*/
     }
     div.mainClass{
-
+        border: outset wheat;
+        font-size: 20px!important;
+        border-radius: 10px;
+        /*background-image: url("http://www.designbolts.com/wp-content/uploads/2014/03/best-blurred-background-wallpaper1.jpg");*/
+        /*background: url("");*/
+        /*background-repeat: no-repeat;*/
         margin: 5% 17% 5% 17%;
         /*margin-bottom: 25%;*/
+
     }
 
 </style>
